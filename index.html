@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Penso, Logo Destino | Grupo Repense</title>
 
     <!-- FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -16,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -29,62 +26,38 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #5b8c85 0%, #8db5af 30%, #b8d8d3 60%, #d4ebe8 100%);
+            background: linear-gradient(135deg, #8b6f4e 0%, #c2a77a 30%, #d9c4a0 60%, #ebddc8 100%);
             background-attachment: fixed;
             color: #1a1a1a;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* ========== ANIMAÇÕES GLOBAIS ========== */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
         }
-
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
-
         @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
-
         .reveal {
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        /* ========== NAVBAR ========== */
         nav {
             width: 100%;
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 245, 235, 0.35);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             display: flex;
@@ -92,8 +65,8 @@
             align-items: center;
             padding: 16px 8%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(255, 250, 240, 0.4);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
         }
 
@@ -101,7 +74,7 @@
             font-size: 28px;
             font-weight: 800;
             letter-spacing: 2px;
-            background: linear-gradient(135deg, #2c5f56, #1a3a34);
+            background: linear-gradient(135deg, #6b4e2e, #3f2e1a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -115,17 +88,15 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-
         .menu a {
             text-decoration: none;
-            color: #1a3a34;
+            color: #3f2e1a;
             font-weight: 600;
             font-size: 16px;
             position: relative;
             transition: all 0.3s ease;
             padding: 5px 0;
         }
-
         .menu a::after {
             content: '';
             position: absolute;
@@ -133,20 +104,13 @@
             left: 0;
             width: 0;
             height: 3px;
-            background: #1a3a34;
+            background: #3f2e1a;
             border-radius: 10px;
             transition: width 0.3s ease;
         }
+        .menu a:hover::after { width: 100%; }
+        .menu a:hover { color: #1f160d; }
 
-        .menu a:hover::after {
-            width: 100%;
-        }
-
-        .menu a:hover {
-            color: #0d1f1c;
-        }
-
-        /* ========== HERO ========== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -157,7 +121,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -165,11 +128,10 @@
             right: -100px;
             width: 400px;
             height: 400px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 245, 230, 0.25);
             border-radius: 50%;
             pointer-events: none;
         }
-
         .hero::after {
             content: '';
             position: absolute;
@@ -177,22 +139,20 @@
             left: -80px;
             width: 300px;
             height: 300px;
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(255, 240, 220, 0.2);
             border-radius: 50%;
             pointer-events: none;
         }
-
         .hero-content {
             max-width: 900px;
             position: relative;
             z-index: 1;
         }
-
         .hero-badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 250, 240, 0.5);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.6);
             padding: 10px 25px;
             border-radius: 50px;
             font-size: 14px;
@@ -200,32 +160,28 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 30px;
-            color: #1a3a34;
+            color: #3f2e1a;
         }
-
         .hero h1 {
             font-size: 70px;
             font-weight: 800;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #1a3a34, #2c5f56);
+            background: linear-gradient(135deg, #3f2e1a, #6b4e2e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             line-height: 1.2;
         }
-
         .hero h2 {
             font-size: 38px;
             margin-bottom: 30px;
             font-weight: 400;
-            color: #1a3a34;
+            color: #3f2e1a;
         }
-
         .hero h2 strong {
             font-weight: 700;
             position: relative;
         }
-
         .hero h2 strong::after {
             content: '';
             position: absolute;
@@ -233,12 +189,11 @@
             left: 0;
             width: 100%;
             height: 8px;
-            background: rgba(44, 95, 86, 0.3);
+            background: rgba(107, 78, 46, 0.35);
             border-radius: 10px;
             z-index: -1;
         }
 
-        /* SÍMBOLO RECICLAGEM */
         .simbolo-reciclagem {
             font-size: 160px;
             margin-bottom: 35px;
@@ -248,7 +203,6 @@
             cursor: default;
             transition: transform 0.5s ease;
         }
-
         .simbolo-reciclagem:hover {
             animation: spin 1.5s ease-in-out;
         }
@@ -256,44 +210,39 @@
         .frase {
             font-size: 26px;
             line-height: 1.9;
-            color: #1a3a34;
+            color: #3f2e1a;
             font-weight: 400;
             max-width: 750px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 250, 240, 0.45);
             backdrop-filter: blur(5px);
             padding: 30px 35px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 240, 0.7);
         }
-
         .frase strong {
             font-weight: 700;
-            color: #0d1f1c;
+            color: #1f160d;
         }
 
-        /* ========== SEÇÕES ========== */
         .section {
             padding: 80px 8%;
         }
-
         .card {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 248, 235, 0.45);
+            border: 1px solid rgba(255, 245, 225, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-radius: 35px;
             padding: 55px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
         }
 
-        /* ========== PERGUNTAS ========== */
         .perguntas {
             display: flex;
             align-items: center;
@@ -301,120 +250,105 @@
             gap: 70px;
             flex-wrap: wrap;
         }
-
         .perguntas-img-wrapper {
             position: relative;
             flex-shrink: 0;
         }
-
         .perguntas-img-wrapper img {
             width: 300px;
+            height: 300px;
+            object-fit: cover;
             border-radius: 25px;
             transition: all 0.4s ease;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             display: block;
             cursor: default;
         }
-
         .perguntas-img-wrapper:hover img {
             transform: scale(1.06);
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
         }
-
         .perguntas ul {
             font-size: 24px;
             line-height: 2.2;
             list-style: none;
         }
-
         .perguntas ul li {
             position: relative;
             padding-left: 40px;
             transition: transform 0.3s ease;
             cursor: default;
         }
-
         .perguntas ul li:hover {
             transform: translateX(8px);
-            color: #0d1f1c;
+            color: #1f160d;
         }
-
         .perguntas ul li::before {
-            content: '🌱';
+            content: '📦';
             position: absolute;
             left: 0;
             top: 2px;
             font-size: 20px;
         }
 
-        /* ========== FATOS IMPACTANTES ========== */
         .fatos-impacto {
             margin-top: 40px;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-
         .fato-item {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 250, 240, 0.6);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 240, 0.8);
             border-radius: 20px;
             padding: 20px 25px;
             font-size: 18px;
             line-height: 1.8;
-            color: #1a3a34;
+            color: #3f2e1a;
             transition: all 0.3s ease;
         }
-
         .fato-item:hover {
-            background: rgba(255, 255, 255, 0.35);
+            background: rgba(255, 248, 235, 0.8);
             transform: translateX(5px);
         }
-
-        .fato-item .fato-numero {
+        .fato-numero {
             font-weight: 800;
             font-size: 22px;
-            color: #0d1f1c;
+            color: #1f160d;
             display: block;
             margin-bottom: 5px;
         }
-
         .fato-destaque {
             font-weight: 600;
-            color: #0d1f1c;
+            color: #1f160d;
         }
 
-        /* ========== SOLUÇÃO ========== */
         .solucao {
             text-align: center;
         }
-
         .solucao h2 {
             font-size: 42px;
             margin-bottom: 35px;
             font-weight: 700;
-            color: #1a3a34;
+            color: #3f2e1a;
         }
-
         .solucao p {
             font-size: 23px;
             line-height: 2.2;
             max-width: 700px;
             margin: 0 auto;
         }
-
         .solucao-highlight {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 250, 240, 0.7);
             padding: 5px 18px;
             border-radius: 30px;
             font-weight: 700;
-            color: #0d1f1c;
+            color: #1f160d;
             margin: 0 3px;
         }
-
         .solucao-icon {
             font-size: 50px;
             margin-bottom: 20px;
@@ -422,25 +356,21 @@
             display: inline-block;
         }
 
-        /* ========== TIPOS ========== */
         .tipos {
             text-align: center;
         }
-
         .tipos h2 {
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #1a3a34;
+            color: #3f2e1a;
         }
-
         .tipos-subtitle {
             font-size: 18px;
-            color: #3d6b63;
+            color: #6b4e2e;
             margin-bottom: 45px;
             font-weight: 500;
         }
-
         .tipos-box {
             display: flex;
             justify-content: center;
@@ -448,38 +378,35 @@
             gap: 100px;
             flex-wrap: wrap;
         }
-
         .tipo-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
         }
-
         .tipo-item img {
             width: 240px;
+            height: 240px;
+            object-fit: cover;
             border-radius: 25px;
             transition: all 0.4s ease;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
             cursor: default;
         }
-
         .tipo-item img:hover {
             transform: translateY(-15px) scale(1.04);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-
         .tipo-label {
             font-weight: 600;
             font-size: 18px;
-            color: #1a3a34;
-            background: rgba(255, 255, 255, 0.3);
+            color: #3f2e1a;
+            background: rgba(255, 250, 240, 0.65);
             padding: 8px 22px;
             border-radius: 25px;
             backdrop-filter: blur(5px);
         }
 
-        /* ========== LOCAL ========== */
         .local {
             display: flex;
             flex-direction: column;
@@ -488,7 +415,6 @@
             gap: 40px;
             flex-wrap: wrap;
         }
-
         .local-content {
             display: flex;
             justify-content: center;
@@ -496,105 +422,89 @@
             gap: 70px;
             flex-wrap: wrap;
         }
-
         .local-img-wrapper {
             flex-shrink: 0;
             position: relative;
         }
-
         .local-img-wrapper img {
             width: 430px;
+            height: 350px;
+            object-fit: cover;
             border-radius: 30px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             transition: all 0.4s ease;
             display: block;
             cursor: default;
         }
-
         .local-img-wrapper:hover img {
             transform: scale(1.03);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
-
         .pin-badge {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: #e74c3c;
+            background: #7a5c3a;
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
             font-weight: 600;
             font-size: 14px;
-            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+            box-shadow: 0 5px 15px rgba(122, 92, 58, 0.5);
             animation: pulse 2s ease-in-out infinite;
             pointer-events: none;
         }
-
         .local-texto {
             font-size: 26px;
             line-height: 2.2;
             text-align: center;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 250, 240, 0.55);
             padding: 35px 40px;
             border-radius: 25px;
             backdrop-filter: blur(5px);
         }
-
         .local-texto strong {
             font-size: 30px;
             display: block;
             margin-bottom: 10px;
-            color: #0d1f1c;
+            color: #1f160d;
         }
 
-        /* Botão do Google Maps */
         .btn-maps {
             display: inline-flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
-            background: #1a3a34;
+            background: #3f2e1a;
             color: white;
             font-weight: 600;
             font-size: 20px;
             padding: 16px 35px;
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(26, 58, 52, 0.3);
+            box-shadow: 0 8px 25px rgba(63, 46, 26, 0.35);
             margin-top: 10px;
         }
-
-        .btn-maps i {
-            font-size: 24px;
-        }
-
+        .btn-maps i { font-size: 24px; }
         .btn-maps:hover {
-            background: #0d1f1c;
+            background: #1f160d;
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(26, 58, 52, 0.45);
+            box-shadow: 0 15px 35px rgba(63, 46, 26, 0.5);
             color: white;
         }
 
-        .btn-maps:active {
-            transform: translateY(-2px);
-        }
-
-        /* ========== RODAPÉ ========== */
         footer {
             padding: 70px 8%;
             text-align: center;
-            background: rgba(0, 0, 0, 0.04);
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.02);
+            border-top: 1px solid rgba(255, 255, 240, 0.5);
         }
-
         footer h2 {
             font-size: 38px;
             font-weight: 700;
             margin-bottom: 45px;
-            color: #1a3a34;
+            color: #3f2e1a;
         }
-
         .footer-info {
             display: flex;
             justify-content: center;
@@ -603,603 +513,198 @@
             flex-wrap: wrap;
             margin-bottom: 40px;
         }
-
         .footer-card {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 250, 240, 0.5);
             backdrop-filter: blur(8px);
             padding: 25px 35px;
             border-radius: 25px;
             font-size: 20px;
             line-height: 2;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 240, 0.7);
             transition: all 0.3s ease;
         }
-
         .footer-card:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 248, 235, 0.75);
             transform: translateY(-5px);
         }
-
         .instagram {
             text-decoration: none;
-            color: #1a3a34;
+            color: #3f2e1a;
             font-weight: 700;
             transition: all 0.3s ease;
             font-size: 22px;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 250, 240, 0.7);
             padding: 15px 30px;
             border-radius: 50px;
         }
-
         .instagram:hover {
-            background: #1a3a34;
+            background: #3f2e1a;
             color: white;
             transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(26, 58, 52, 0.3);
+            box-shadow: 0 10px 25px rgba(63, 46, 26, 0.35);
         }
-
-        .fa-instagram {
-            font-size: 28px;
-        }
-
-        /* BOTÃO CHAT NO RODAPÉ */
-        .btn-chat-footer {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            background: linear-gradient(135deg, #1a3a34, #2c5f56);
-            color: white;
-            font-weight: 600;
-            font-size: 20px;
-            padding: 16px 35px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(26, 58, 52, 0.3);
-            margin-top: 15px;
-        }
-
-        .btn-chat-footer i {
-            font-size: 24px;
-        }
-
-        .btn-chat-footer:hover {
-            background: linear-gradient(135deg, #0d1f1c, #1a3a34);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(26, 58, 52, 0.45);
-            color: white;
-        }
-
-        .btn-chat-footer:active {
-            transform: translateY(-2px);
-        }
+        .fa-instagram { font-size: 28px; }
 
         .footer-bottom {
             margin-top: 30px;
             font-size: 15px;
-            color: #3d6b63;
+            color: #6b4e2e;
             opacity: 0.8;
         }
 
-        /* ========== RESPONSIVIDADE ========== */
         @media(max-width: 1024px) {
-            .hero h1 {
-                font-size: 50px;
-            }
-
-            .hero h2 {
-                font-size: 30px;
-            }
-
-            .frase {
-                font-size: 22px;
-                padding: 25px;
-            }
-
-            .simbolo-reciclagem {
-                font-size: 130px;
-            }
-
-            .section {
-                padding: 60px 5%;
-            }
-
-            .card {
-                padding: 40px 30px;
-            }
-
-            .perguntas {
-                gap: 40px;
-            }
-
-            .perguntas ul {
-                font-size: 21px;
-            }
-
-            .local-content {
-                gap: 40px;
-            }
-
-            .local-img-wrapper img {
-                width: 100%;
-                max-width: 380px;
-            }
-
-            .tipos-box {
-                gap: 50px;
-            }
-
-            .footer-info {
-                gap: 40px;
-            }
-            
-            .fato-item {
-                font-size: 16px;
-            }
+            .hero h1 { font-size: 50px; }
+            .hero h2 { font-size: 30px; }
+            .frase { font-size: 22px; padding: 25px; }
+            .simbolo-reciclagem { font-size: 130px; }
+            .section { padding: 60px 5%; }
+            .card { padding: 40px 30px; }
+            .perguntas { gap: 40px; }
+            .perguntas ul { font-size: 21px; }
+            .local-content { gap: 40px; }
+            .local-img-wrapper img { width: 100%; max-width: 380px; height: auto; }
+            .tipos-box { gap: 50px; }
+            .footer-info { gap: 40px; }
+            .fato-item { font-size: 16px; }
         }
-
         @media(max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                padding: 16px 5%;
-            }
-
-            .menu {
-                gap: 20px;
-            }
-
-            .menu a {
-                font-size: 14px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero h2 {
-                font-size: 24px;
-            }
-
-            .hero-badge {
-                font-size: 12px;
-                padding: 8px 18px;
-                letter-spacing: 2px;
-            }
-
-            .frase {
-                font-size: 19px;
-                padding: 20px;
-            }
-
-            .simbolo-reciclagem {
-                font-size: 100px;
-            }
-
-            .perguntas ul,
-            .solucao p,
-            .local-texto,
-            .footer-card {
-                font-size: 19px;
-            }
-
-            .solucao h2,
-            .tipos h2,
-            footer h2 {
-                font-size: 30px;
-            }
-
-            .perguntas-img-wrapper img {
-                width: 240px;
-            }
-
-            .local-img-wrapper img {
-                max-width: 320px;
-            }
-
-            .tipo-item img {
-                width: 180px;
-            }
-
-            .tipos-box {
-                gap: 35px;
-            }
-
-            .card {
-                padding: 30px 20px;
-                border-radius: 25px;
-            }
-
-            .footer-info {
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            .btn-maps {
-                font-size: 18px;
-                padding: 14px 28px;
-            }
-
-            .btn-chat-footer {
-                font-size: 18px;
-                padding: 14px 28px;
-            }
-            
-            .fatos-impacto {
-                gap: 15px;
-            }
-            
-            .fato-item {
-                font-size: 15px;
-                padding: 15px 20px;
-            }
-            
-            .fato-item .fato-numero {
-                font-size: 18px;
-            }
+            nav { flex-direction: column; gap: 15px; padding: 16px 5%; }
+            .menu { gap: 20px; }
+            .menu a { font-size: 14px; }
+            .hero h1 { font-size: 38px; }
+            .hero h2 { font-size: 24px; }
+            .hero-badge { font-size: 12px; padding: 8px 18px; letter-spacing: 2px; }
+            .frase { font-size: 19px; padding: 20px; }
+            .simbolo-reciclagem { font-size: 100px; }
+            .perguntas ul, .solucao p, .local-texto, .footer-card { font-size: 19px; }
+            .solucao h2, .tipos h2, footer h2 { font-size: 30px; }
+            .perguntas-img-wrapper img { width: 240px; height: 240px; }
+            .local-img-wrapper img { max-width: 320px; height: auto; }
+            .tipo-item img { width: 180px; height: 180px; }
+            .tipos-box { gap: 35px; }
+            .card { padding: 30px 20px; border-radius: 25px; }
+            .footer-info { flex-direction: column; gap: 25px; }
+            .btn-maps { font-size: 18px; padding: 14px 28px; }
+            .fatos-impacto { gap: 15px; }
+            .fato-item { font-size: 15px; padding: 15px 20px; }
+            .fato-numero { font-size: 18px; }
         }
-
         @media(max-width: 480px) {
-            .menu {
-                gap: 12px;
-            }
-
-            .menu a {
-                font-size: 12px;
-            }
-
-            .hero h1 {
-                font-size: 50px;
-            }
-
-            .hero h2 {
-                font-size: 30px;
-            }
-
-            .frase {
-                font-size: 22px;
-                padding: 25px;
-            }
-
-            .simbolo-reciclagem {
-                font-size: 130px;
-            }
-
-            .section {
-                padding: 60px 5%;
-            }
-
-            .card {
-                padding: 40px 30px;
-            }
-
-            .perguntas {
-                gap: 40px;
-            }
-
-            .perguntas ul {
-                font-size: 21px;
-            }
-
-            .local-content {
-                gap: 40px;
-            }
-
-            .local-img-wrapper img {
-                width: 100%;
-                max-width: 380px;
-            }
-
-            .tipos-box {
-                gap: 50px;
-            }
-
-            .footer-info {
-                gap: 40px;
-            }
+            .menu { gap: 12px; }
+            .menu a { font-size: 12px; }
+            .hero h1 { font-size: 30px; }
+            .hero h2 { font-size: 20px; }
+            .frase { font-size: 17px; }
+            .simbolo-reciclagem { font-size: 80px; }
+            .perguntas ul, .solucao p, .local-texto, .footer-card { font-size: 17px; }
+            .perguntas ul li { padding-left: 30px; }
+            .perguntas ul li::before { font-size: 16px; }
+            .local-texto { padding: 25px; }
+            .tipo-item img { width: 140px; height: 140px; }
+            .instagram { font-size: 18px; padding: 12px 22px; }
+            .btn-maps { font-size: 16px; padding: 12px 22px; gap: 8px; }
+            .btn-maps i { font-size: 20px; }
+            .fato-item { font-size: 14px; padding: 12px 15px; }
+            .fato-numero { font-size: 16px; }
         }
-
-        @media(max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                padding: 16px 5%;
-            }
-
-            .menu {
-                gap: 20px;
-            }
-
-            .menu a {
-                font-size: 14px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero h2 {
-                font-size: 24px;
-            }
-
-            .hero-badge {
-                font-size: 12px;
-                padding: 8px 18px;
-                letter-spacing: 2px;
-            }
-
-            .frase {
-                font-size: 19px;
-                padding: 20px;
-            }
-
-            .simbolo-reciclagem {
-                font-size: 100px;
-            }
-
-            .perguntas ul,
-            .solucao p,
-            .local-texto,
-            .footer-card {
-                font-size: 19px;
-            }
-
-            .solucao h2,
-            .tipos h2,
-            footer h2 {
-                font-size: 30px;
-            }
-
-            .perguntas-img-wrapper img {
-                width: 240px;
-            }
-
-            .local-img-wrapper img {
-                max-width: 320px;
-            }
-
-            .tipo-item img {
-                width: 180px;
-            }
-
-            .tipos-box {
-                gap: 35px;
-            }
-
-            .card {
-                padding: 30px 20px;
-                border-radius: 25px;
-            }
-
-            .footer-info {
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            .btn-maps {
-                font-size: 18px;
-                padding: 14px 28px;
-            }
-
-            .btn-chat-footer {
-                font-size: 18px;
-                padding: 14px 28px;
-            }
-        }
-
-        @media(max-width: 480px) {
-            .menu {
-                gap: 12px;
-            }
-
-            .menu a {
-                font-size: 12px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero h2 {
-                font-size: 20px;
-            }
-
-            .frase {
-                font-size: 17px;
-            }
-
-            .simbolo-reciclagem {
-                font-size: 80px;
-            }
-
-            .perguntas ul,
-            .solucao p,
-            .local-texto,
-            .footer-card {
-                font-size: 17px;
-            }
-
-            .perguntas ul li {
-                padding-left: 30px;
-            }
-
-            .perguntas ul li::before {
-                font-size: 16px;
-            }
-
-            .local-texto {
-                padding: 25px;
-            }
-
-            .tipo-item img {
-                width: 140px;
-            }
-
-            .instagram {
-                font-size: 18px;
-                padding: 12px 22px;
-            }
-
-            .btn-maps {
-                font-size: 16px;
-                padding: 12px 22px;
-                gap: 8px;
-            }
-
-            .btn-maps i {
-                font-size: 20px;
-            }
-
-            .btn-chat-footer {
-                font-size: 16px;
-                padding: 12px 22px;
-                gap: 8px;
-            }
-
-            .btn-chat-footer i {
-                font-size: 20px;
-            }
-            
-            .fato-item {
-                font-size: 14px;
-                padding: 12px 15px;
-            }
-            
-            .fato-item .fato-numero {
-                font-size: 16px;
-            }
-        }
-
     </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <div class="logo">REPENSE</div>
-
     <div class="menu">
         <a href="#inicio">Início</a>
         <a href="#solucao">Solução</a>
-        <a href="#tipos">Pilhas</a>
+        <a href="#tipos">Papelão</a>
         <a href="#local">Local</a>
         <a href="#contato">Contato</a>
     </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="inicio">
     <div class="hero-content reveal">
-        <div class="hero-badge">♻️ Projeto Ambiental</div>
-
+        <div class="hero-badge">📦 Projeto Ambiental</div>
         <h1>PENSO, LOGO DESTINO</h1>
-
         <h2>GRUPO: <strong>REPENSE</strong></h2>
-
-        <div class="simbolo-reciclagem">♻</div>
-
+        <div class="simbolo-reciclagem">♻️</div>
         <div class="frase">
-            "Você imagina o estrago que essa pecinha
-            minúscula pode causar?<br>
-            <strong>Participe do nosso projeto e faça a sua parte
-            para proteger o meio ambiente.</strong>"
+            "Você imagina o impacto que o papelão descartado incorretamente pode causar?<br>
+            <strong>Participe do nosso projeto e dê o destino certo para o papelão, protegendo o meio ambiente.</strong>
         </div>
     </div>
 </section>
 
-<!-- PERGUNTAS -->
 <section class="section">
     <div class="card perguntas reveal">
         <div class="perguntas-img-wrapper">
-            <img src="https://i.ibb.co/Y48c075W/IMG-20260522-WA0004.jpg"
-                 alt="Imagem sobre descarte de pilhas - Projeto Repense">
+            <img src="https://i.ibb.co/ZRhvKM6V/IMG-20260522-WA0004.jpg" alt="Papelão para reciclagem - Projeto Repense">
         </div>
-
         <ul>
-            <li>Como você descarta as suas pilhas?</li>
-            <li>Sabe por que devemos descartá-las corretamente?</li>
-            <li>Você conhece algum ponto de recolhimento?</li>
+            <li>Como você descarta o seu papelão?</li>
+            <li>Sabe por que reciclar papelão é essencial?</li>
+            <li>Você conhece algum ponto de coleta de papelão?</li>
         </ul>
-        
-        <!-- TEXTOS ADICIONADOS APÓS AS PERGUNTAS -->
+
         <div class="fatos-impacto">
             <div class="fato-item">
-                <span class="fato-numero">1. ♻️</span>
-                Uma pilha jogada no lixo comum pode levar até <span class="fato-destaque">500 anos</span> para se decompor. Nesse tempo, ela libera metais tóxicos que contaminam o solo, a água e colocam vidas em risco.<br>
-                <span class="fato-destaque">Mas você pode mudar essa história.</span>
+                <span class="fato-numero">1. 📦</span>
+                Uma caixa de papelão jogada no lixo comum pode levar até <span class="fato-destaque">6 meses</span> para se decompor, mas se reciclada, economiza água e energia. <br>
+                <span class="fato-destaque">Cada papelão reciclado evita o corte de novas árvores.</span>
             </div>
-            
             <div class="fato-item">
                 <span class="fato-numero">2.</span>
-                O que você descarta em <span class="fato-destaque">segundos</span>, a natureza sente por <span class="fato-destaque">séculos</span>.
+                O que você descarta em <span class="fato-destaque">segundos</span>, a natureza pode transformar em <span class="fato-destaque">vida nova</span> quando reciclado.
             </div>
-            
             <div class="fato-item">
                 <span class="fato-numero">3.</span>
-                Você sabia que <span class="fato-destaque">uma única pilha</span> pode contaminar <span class="fato-destaque">milhares de litros de água</span>?
+                Você sabia que <span class="fato-destaque">1 tonelada de papelão reciclado</span> evita o corte de <span class="fato-destaque">cerca de 20 árvores</span>?
             </div>
         </div>
     </div>
 </section>
 
-<!-- SOLUÇÃO -->
 <section class="section" id="solucao">
     <div class="card solucao reveal">
-        <div class="solucao-icon">🌍</div>
-
+        <div class="solucao-icon">📦🌱</div>
         <h2>SOLUÇÃO</h2>
-
         <p>
-            Em cooperação com a <span class="solucao-highlight">Fundema</span> a nossa escola estará funcionando
-            como <span class="solucao-highlight">ponto de recolhimento de pilhas</span>.
-
+            Em cooperação com a <span class="solucao-highlight">comunidade escolar</span>, a nossa escola estará funcionando como <span class="solucao-highlight">ponto de coleta de papelão</span>.
             <br><br>
-
-            Traga aquela que estragou a tempos e você esqueceu no armário.
-
+            Traga aquele papelão que está ocupando espaço em casa e dê a ele um destino sustentável.
             <br><br>
-
             <strong>Nenhum gesto é pequeno demais para ajudar o meio ambiente.</strong>
         </p>
     </div>
 </section>
 
-<!-- TIPOS -->
 <section class="section tipos" id="tipos">
     <div class="card reveal">
-        <h2>Tipos de pilhas aceitas</h2>
-        <p class="tipos-subtitle">Aceitamos diversos formatos. Confira abaixo:</p>
-
+        <h2>Tipos de papelão aceitos</h2>
+        <p class="tipos-subtitle">Aceitamos papelão limpo e seco. Confira exemplos:</p>
         <div class="tipos-box">
             <div class="tipo-item">
-                <img src="https://i.ibb.co/WNfcqPM6/IMG-20260522-WA0006.jpg"
-                     alt="Pilhas alcalinas comuns - Projeto Repense">
-                <span class="tipo-label">Pilhas Comuns</span>
+                <img src="https://i.ibb.co/jZzGKdYQ/IMG-20260522-WA0006.jpg" alt="Caixas de papelão comuns para reciclagem">
+                <span class="tipo-label">Caixas de papelão</span>
             </div>
-
             <div class="tipo-item">
-                <img src="https://i.ibb.co/yBxVLgb7/IMG-20260522-WA0003.jpg"
-                     alt="Diversos tipos de pilhas e baterias - Projeto Repense">
-                <span class="tipo-label">Diversos Modelos</span>
+                <img src="https://i.ibb.co/R40J5C44/IMG-20260522-WA0003.jpg" alt="Diversos tipos de papelão reciclável">
+                <span class="tipo-label">Papelão ondulado</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- LOCAL -->
 <section class="section" id="local">
     <div class="card local reveal">
         <div class="local-content">
             <div class="local-img-wrapper">
                 <span class="pin-badge">📍 Ponto de Coleta</span>
-                <img src="https://i.ibb.co/Pz02T6GD/IMG-20260522-WA0005.jpg"
-                     alt="Local de recolhimento de pilhas - Almirante Boiteux">
+                <img src="https://i.ibb.co/Pz02T6GD/IMG-20260522-WA0005.jpg" alt="Local de recolhimento de papelão - Almirante Boiteux">
             </div>
-
             <div class="local-texto">
                 <strong>📍 Local de recolhimento</strong>
                 <br>
@@ -1208,60 +713,33 @@
                 📍 Localização: Av. Nereu Ramos, 180. Centro Araquari-SC
             </div>
         </div>
-
-        <a href="https://maps.app.goo.gl/ntfaUpVzEZDQSmM59?g_st=aw"
-           class="btn-maps"
-           target="_blank"
-           rel="noopener">
-            <i class="fa-solid fa-map-location-dot"></i>
-            Ver no Google Maps
+        <a href="https://maps.app.goo.gl/ntfaUpVzEZDQSmM59?g_st=aw" class="btn-maps" target="_blank" rel="noopener">
+            <i class="fa-solid fa-map-location-dot"></i> Ver no Google Maps
         </a>
     </div>
 </section>
 
-<!-- RODAPÉ -->
 <footer id="contato">
     <h2>👨‍🏫 PROFESSOR RESPONSÁVEL: Reinaldo</h2>
-
     <div class="footer-info">
         <div class="footer-card">
             📞 <strong>Contato:</strong> (47) 99127-6058<br>
             👤 <strong>Nome:</strong> Heloisa
         </div>
-
         <div class="footer-card">
             <i class="fa-brands fa-instagram"></i>
-            <a class="instagram"
-               href="https://instagram.com/projeto_repense__"
-               target="_blank"
-               rel="noopener">
-                @projeto_repense__
-            </a>
+            <a class="instagram" href="https://instagram.com/projeto_repense__" target="_blank" rel="noopener">@projeto_repense__</a>
         </div>
     </div>
-
-    <!-- BOTÃO CHAT ATUALIZADO -->
-    <a href="https://misaeltorquato.github.io/chat/" 
-       class="btn-chat-footer" 
-       target="_blank" 
-       rel="noopener">
-        <i class="fa-solid fa-comments"></i>
-        Chat
-    </a>
-
-    <p class="footer-bottom">
-        🌱 Grupo Repense &copy; 2026 — Juntos pelo meio ambiente.
-    </p>
+    <p class="footer-bottom">📦 Grupo Repense &copy; 2026 — Juntos pelo meio ambiente.</p>
 </footer>
 
-<!-- SCRIPT para animação de revelação -->
 <script>
     const revealElements = document.querySelectorAll('.reveal');
 
     function checkReveal() {
         const windowHeight = window.innerHeight;
         const revealPoint = 120;
-
         revealElements.forEach(element => {
             const revealTop = element.getBoundingClientRect().top;
             if (revealTop < windowHeight - revealPoint) {
@@ -1280,6 +758,5 @@
     window.addEventListener('scroll', checkReveal);
     window.addEventListener('load', checkReveal);
 </script>
-
 </body>
 </html>
